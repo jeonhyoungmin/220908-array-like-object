@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <ul>
+      <li>items-1</li>
+      <li>items-2</li>
+      <li>items-3</li>
+      <li>items-4</li>
+      <li>items-5</li>
+    </ul>
+  </div>
+  <script>
+    const root = document.getElementById("root");
+    const notArrayLi = document.querySelectorAll("ul > li");
+    console.log(Array.isArray(notArrayLi)); // false
+    const liFrom = Array.from(document.querySelectorAll("ul > li"));
+    console.log(Array.isArray(liFrom)); // true
+    // form 메서드: 받은 인수를 새로운 배열로 반환
+    const liSpread = [...document.querySelectorAll("ul > li")];
+    console.log(Array.isArray(liSpread)); // true
+    // 전개연산자: 새로운 요소를 배열에 추가
+  </script>
+</body>
+</html>
